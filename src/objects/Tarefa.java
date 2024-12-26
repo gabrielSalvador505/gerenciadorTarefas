@@ -1,6 +1,7 @@
 package objects;
 
 import java.time.LocalDate;
+import controller.*;
 
 public class Tarefa {
     private int id;
@@ -66,7 +67,7 @@ public class Tarefa {
         return  "id: " + id +
                 "| titulo: " + titulo +
                 "| descricao: '" + descricao +
-                "| prazo: " + prazo +
+                "| prazo: " + prazo.format(TarefaController.formatter) +
                 "| concluida: " + concluida;
     }
 }

@@ -24,9 +24,10 @@ public class Main {
     public static void header() {
         System.out.println("-- Tarefas --");
         System.out.println("1. listar tarefas");
-        System.out.println("2. adicioanr tarefa");
+        System.out.println("2. adicionar tarefa");
         System.out.println("3. concluir tarefas");
-        System.out.println("4. finalizar");
+        System.out.println("4. detalhar tarefa");
+        System.out.println("5. finalizar");
 
     }
 
@@ -42,6 +43,10 @@ public class Main {
             }
             case 3 -> {
                 TarefaController.concluirTarefa();
+                yield true;
+            }
+            case 4 -> {
+                TarefaController.detalharTarefa();
                 yield true;
             }
             default -> false;
